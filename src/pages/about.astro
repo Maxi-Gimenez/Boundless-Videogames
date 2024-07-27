@@ -1,0 +1,97 @@
+---
+---
+<section class="con" id="about">
+    <h2>About</h2>
+    
+    <div class="contenedorAbout">
+        <div class="contenedorBVideogames">
+            <img src="../../public/logoconfondo.png" alt="Logo Company">
+            <h3>Boundless Videogames</h3>
+            <p>Videogame Development Company</p>
+            <div class="aboutSocial">
+                <a href="https://www.instagram.com/boundlessvideogames/" target="_blank">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+                <a href="https://github.com/Boundless-Videogames" target="_blank">
+                    <i class='bx bxl-github' ></i>
+                </a>
+            </div>
+        </div>
+        <div class="parrafo">
+            We are two high school students passionate about programming and video game development. Our goal is to create video games that not only provide high-quality entertainment but also inspire creativity and innovation. We have dedicated a lot of time to learning and practicing in this field.
+        </div>
+    </div>
+</section>
+
+<style>
+
+    .con{
+        min-height: 90vh;
+        padding: 20px
+    }
+    h2{
+        text-align: center;
+        color: #e1efd8;
+        font-size: 300;
+    }
+    .contenedorAbout{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-wrap: pretty;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .contenedorBVideogames{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        
+        color: #757575;
+        margin: 20px 0px;
+    }
+    .contenedorBVideogames h3{
+        font-size: calc(1rem + 1vw);
+    }
+    .contenedorBVideogames img{
+        width: 130px;
+        border-radius: 50%;
+        margin-bottom: 5px;
+    }
+
+    .parrafo{
+        width: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        font-weight: 550;
+        color: #757575;
+
+        position: relative;
+    }
+
+    .aboutSocial{
+        display: flex;
+        margin: 5px;
+        margin-top: 15px;
+        gap: 10px;
+    }
+    a{
+
+        border: solid .5px #757575;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.3rem;
+        padding: 8px;
+        color: #757575;
+        
+        transition: all .2s linear;
+        &:hover{
+            color: #000;
+            background-color: #757575;
+            transform: translateY(-3px);
+        }
+    }
+
+</style>

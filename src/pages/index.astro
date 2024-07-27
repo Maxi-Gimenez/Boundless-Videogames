@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/header.astro';
+import Title from './title&img.astro'
+import Games from './games.astro'
+import About from './about.astro'
+---
+
+<Layout title="Boundless Videogames">
+	<div class="oneFace">
+		<Header />
+		<Title />
+	</div>
+	<Games />
+	<About />
+</Layout>
+
+<style>
+	.oneFace{
+		min-height: 100dvh;
+	}
+</style>

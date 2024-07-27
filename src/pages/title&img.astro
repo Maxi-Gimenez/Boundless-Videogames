@@ -1,0 +1,53 @@
+---
+---
+
+<section class="contenedor-tittle" id="home">
+    <div class="title">
+        <h1>ARE YOU READY?</h1>
+    </div>
+    <div class="imgContainer">
+        <img src="../../public/piloto.png" alt="">
+    </div>
+</section>
+
+<style>
+    section{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 75px;
+        width: 100%;
+        padding: 10px;
+    }
+    h1{
+        color: #757575;
+        font-size: calc(2rem + 1.5vw);
+        text-align: center;
+        animation: onOff 2s infinite alternate linear;
+    }
+    .imgContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        
+    }
+    img{
+        mask-image: linear-gradient(
+        #000 80%,
+        transparent
+        )
+    }
+
+    @keyframes onOff {
+        0%{
+            color: #757575;
+        }
+        100%{
+            color: #55725b;
+            text-shadow: 2px 2px 4px rgba(45, 121, 56, 0.5);
+        }
+    }
+</style>
+

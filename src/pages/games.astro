@@ -1,0 +1,53 @@
+---
+import GameCard from '../components/Card.astro';
+const games = [
+    {
+        title: 'Overcut Dominance',
+        body: 'Un juego de carreras basado en la categoría F1 dónde podrás adentrarte en profundidad desde distintas partes, ya sea como mecánico o piloto.',
+        img: '../../public/overcutDominance.jpeg',
+        tags: 'Estrategia, Carrera'
+    },
+    {
+        title: 'You aré the next 1',
+        body: 'Una joven que descubre que en su instituto desaparecen estudiantes de forma periódica. Junto a sus amigos, investiga y descubre que están siendo víctimas de una serie de asesinatos. Descubre quien fue',
+        img: '../../public/youarethenext.jpg',
+        tags: 'Terror, Misterio'
+    },
+];
+---
+
+
+<section id="games">
+    <h2 class="subtitle" >Games</h2>
+    <div class="game-grid">
+        {games.map(game => (
+            <GameCard
+                img={game.img}
+                title={game.title}
+                body={game.body}
+                tags={game.tags}
+            />
+        ))}
+    </div>
+</section>
+
+<style>
+    section{
+        height: 100vh;
+        margin-top: 60px;
+        position: relative;
+    }
+    .game-grid{
+        margin-top: 20px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .subtitle{
+        text-align: center;
+        color: #e1efd8;
+        font-size: 300;
+        margin: 10px;
+    }
+</style>

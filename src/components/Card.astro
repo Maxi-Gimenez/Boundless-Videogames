@@ -1,0 +1,90 @@
+---
+interface Props {
+    title: string;
+    body: string;
+    img: string;
+    tags: string;
+}
+
+const { title, body, img, tags } = Astro.props;
+---
+
+<div class="game-card">
+    <div class="img">
+        {img ? <img src={img} alt={title} /> : <p>No image available</p>}
+    </div>
+    <div class="body">
+        <h2>{title}</h2>
+        <p class="span">{body}</p>
+        <span class="span span2">{tags}</span>
+    </div>
+</div>
+<style>
+	.game-card{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		cursor: pointer;
+		background-color: rgb(35, 44, 36);
+		box-shadow: 0 5px 8px rgba(112, 255, 112, 0.2);
+		width: 230px;
+		height: 230px;
+		margin: 15px;
+		position: relative;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+	
+	.img{
+		min-height: 170px;
+	}
+	.img img{
+		width: 170px;
+		position: relative;
+		top: -20px;
+		
+		transition: all .3s ease;
+	}
+	.body{
+		position: relative;
+		top: 1%;
+		color: #fff;
+		transition: all .3s ease;
+		overflow: hidden;
+		padding: 7px
+	}
+	.body h2{
+		text-align: center;
+		font-size: 1.3rem;
+		font-weight: 550;
+		margin-top: 5px;
+	}
+	.span{
+		position: relative;
+		top: 70%;
+		font-size: .8rem;
+		color: #fff7;
+	}
+	.span2{
+		color: #9f9;
+		margin-top: 10px;
+		transition: all .3s ease;
+	}
+	.game-card:hover img {
+		opacity: 0;
+	}
+	.game-card:hover .body{
+		top: -70%;
+		overflow: visible;
+	}
+	.game-card:hover .span{
+		top: 5%;
+	}
+</style>
+<script>
+	const gameCard = document.querySelectorAll('.game-card')
+	gameCard.forEach(item => {
+    	item.addEventListener("click",()=>{
+			console.log("hola")
+		})
+	});
+</script>
